@@ -38,7 +38,7 @@ def empleados_list(request):
             serializer.save() # Se guardan los datos en la DB
             return Response(serializer.data, status=status.HTTP_201_CREATED) # Se retorna la respuesta en formato JSON
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) # Se retorna la respuesta en formato JSON
-    
+
 # GET /empleadosAPI/ -> Obtiene todos los empleados
 # POST /empleadosAPI/ -> Crea un nuevo empleado
 
